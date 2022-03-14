@@ -1,0 +1,39 @@
+server:
+  servlet:
+    contextpath: /hdroute
+
+jwt:
+  secret: hastings
+  token:
+    validity:
+      seconds: 3600
+
+spring:
+  profiles:
+    active: "dev"
+  security:
+    user:
+      name: hdadmin
+      password: 123
+      email: hd-router-su@hastingsdirect.com
+
+  mail:
+    host: localhost
+    port: 25
+    username: username
+    password: password
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+    jpa:
+      database-platform: org.hibernate.dialect.H2Dialect
+azure:
+  storage:
+    ConnectionString: DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;
+    container:
+      routeConfig:
+        name: routeconfigcontainer
+      user:
+        name: usercontainer
