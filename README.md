@@ -28,11 +28,11 @@ or
 Runs on http://localhost:8080/hdroute
 
 Initial routerUsers:
-admin routerUser u: **_hd-router-su@hastingsdirect.com_** p: **_123_**
+admin routerUser u: **_hd-router-su@hddirect.com_** p: **_123_**
 
 ```
 {
-"username":"hd-router-su@hastingsdirect.com",
+"username":"hd-router-su@hddirect.com",
 "password":"123"
 }
 ```

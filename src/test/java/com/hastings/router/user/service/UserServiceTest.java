@@ -53,7 +53,7 @@ class UserServiceTest {
     void createUser() {
         RouterUser routerUser = new RouterUser();
         routerUser.setFirstName("Andy");
-        routerUser.setLastName("Smith");
+        routerUser.setLastName("Anderson");
         routerUser.setUserName("classClown");
 
         when(fakerService.generate()).thenReturn("fakepwd");
@@ -68,11 +68,11 @@ class UserServiceTest {
     void findUsers() {
         RouterUser routerUser = new RouterUser();
         routerUser.setFirstName("Andy");
-        routerUser.setLastName("Smith");
+        routerUser.setLastName("Anderson");
         routerUser.setUserName("classClown");
         RouterUser routerUser2 = new RouterUser();
         routerUser2.setFirstName("Andy");
-        routerUser2.setLastName("Smith");
+        routerUser2.setLastName("Anderson");
         routerUser2.setUserName("classClown");
         List<RouterUser> expected = new ArrayList<>();
         expected.add(routerUser);

@@ -15,7 +15,7 @@ spring:
     user:
       name: hdadmin
       password: 123
-      email: hd-router-su@hastingsdirect.com
+      email: hd-router-su@hddirect.com
 
   mail:
     host: localhost

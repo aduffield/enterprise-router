@@ -43,7 +43,7 @@ public class JwtAuthenticationResourceTest {
         RouterUser routerUser = new RouterUser();
         routerUser.setUserName("hi2@hello.com");
         AuthenticationResponse authenticationResponse = new AuthenticationResponse();
-        authenticationResponse.setFirstName("andy");
+        authenticationResponse.setFirstName("Andy");
 
         when(jwtUserDetailsService.findRouterUser(authenticationRequest.getUsername(),
                 authenticationRequest.getPassword())).thenReturn(routerUser);

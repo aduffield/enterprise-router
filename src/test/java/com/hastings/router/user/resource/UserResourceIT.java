@@ -20,7 +20,6 @@ import org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfig
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
@@ -76,17 +75,17 @@ class UserResourceIT extends CommonResourceIT {
     void getUsers() throws Exception{
 
         //Create a user
-        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Andy@gmail3.com"))
+        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Eddie@gmail3.com"))
                 .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
 
         //Create another user
-        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Andy@gmail2.com"))
+        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Eddie@gmail2.com"))
                 .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
 
         //Create a third user
-        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Andy@gmail1.com"))
+        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Eddie@gmail1.com"))
                 .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
 
@@ -111,12 +110,12 @@ class UserResourceIT extends CommonResourceIT {
     void getUserSuccess() throws Exception {
 
         //Create a user
-        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Andy@gmail3.com"))
+        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("eddie@gmail3.com"))
                 .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
 
         //Check its possible to retrieve the user.
-        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/user/Andy@gmail3.com")
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.get("/user/eddie@gmail3.com")
                         .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn();
@@ -130,7 +129,7 @@ class UserResourceIT extends CommonResourceIT {
     void getUserFail_noUser() throws Exception {
 
         //Create a user
-        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Andy@gmail3.com"))
+        mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("eddie@gmail3.com"))
                 .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON));
 
@@ -151,7 +150,7 @@ class UserResourceIT extends CommonResourceIT {
 
     @Test
     void createUser() throws Exception {
-        MvcResult result = mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("Andy@gmail3.com"))
+        MvcResult result = mvc.perform(MockMvcRequestBuilders.post("/user").content(getContent("eddie@gmail3.com"))
                         .header("Authorization", "Bearer " + token).contentType(MediaType.APPLICATION_JSON)
                         .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk()).andReturn();
@@ -165,8 +164,8 @@ class UserResourceIT extends CommonResourceIT {
     //Quick and nasty - create a json object for a user
     private String getContent(String userName) {
         return "{\"userName\":\"" + userName + "\"," +
-                "\"firstName\":\"Andy\",\"lastName\":\"Duffield\"," +
-                "\"emailAddress\":\"AAndy@gmail.com\"," +
+                "\"firstName\":\"eddie\",\"lastName\":\"Anderson\"," +
+                "\"emailAddress\":\"eddie@gmail.com\"," +
                 "\"roles\": [" +
                 "\"STANDARD_USER\"" +
                 "]}";

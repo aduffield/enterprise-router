@@ -26,7 +26,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\":\"hdadmin@hastingsdirect.com\",\n     \"password\":\"123\"\n}",
+					"raw": "{\n    \"username\":\"hdadmin@hddirect.com\",\n     \"password\":\"123\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -76,7 +76,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userName\": \"Andy@gmail.com\",\n    \"firstName\": \"Andy\",\n    \"lastName\": \"Duffield\",\n    \"emailAddress\": \"Andy@gmail.com\",\n    \"roles\": [\n        \"STANDARD_USER\"\n    ]\n}",
+					"raw": "{\n    \"userName\": \"eddie@gmail.com\",\n\"firstName\": \"Andy\",\n\"lastName\": \"Anderson\",\n\"emailAddress\": \"eddie@gmail.com\",\n\"roles\": [\n\"STANDARD_USER\"\n]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -172,7 +172,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\":\"Andy@gmail.com\",\n     \"password\":\"MagnificentJarrett60984\"\n}",
+					"raw": "{\n    \"username\":\"eddie@gmail.com\",\n     \"password\":\"MagnificentJarrett60984\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -115,7 +115,7 @@ public class UserRepositoryIT extends AbstractIntegrationIT {
 
         List<UserRole> role = new ArrayList<>();
         role.add(UserRole.STANDARD_USER);
-        routerUser = new RouterUser("hello@world.com", "Andy", "Duffield", role);
+        routerUser = new RouterUser("hello@world.com", "Andy", "Anderson", role);
         routerUser.setOrganisationId(1234L);
         routerUser.setOrganisationName("TUI");
         routerUser.setPassword("hello");

@@ -46,10 +46,10 @@ class JwtAuthenticationResourceIT extends CommonResourceIT {
         //Create a user
         MvcResult result = mvc.perform(post("/user")
                 .content("{" +
-                        "\"firstName\":\"Matthew\"," +
-                        "\"lastName\":\"duff\"," +
-                        "\"emailAddress\":\"matthew@gmail.com\"," +
-                        "\"userName\":\"matthew@gmail.com\"," +
+                        "\"firstName\":\"Joe\"," +
+                        "\"lastName\":\"Bloggs\"," +
+                        "\"emailAddress\":\"jbloggs@gmail.com\"," +
+                        "\"userName\":\"jbloggs@gmail.com\"," +
                         "\"roles\": [" +
                         "\"STANDARD_USER\"" +
                         "]}")
@@ -65,7 +65,7 @@ class JwtAuthenticationResourceIT extends CommonResourceIT {
         //Authenticate the user
         MvcResult authResult = mvc.perform(MockMvcRequestBuilders
                 .post("/authenticate")
-                .content("{\"username\":\"matthew@gmail.com\",\"password\":\"" + password + "\"}")
+                .content("{\"username\":\"jbloggs@gmail.com\",\"password\":\"" + password + "\"}")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)).andReturn();
 

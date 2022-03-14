@@ -22,7 +22,7 @@ public class CommonResourceIT {
     protected String getToken() throws Exception {
         MvcResult result = mvc.perform(MockMvcRequestBuilders
                 .post("/authenticate")
-                .content("{\"username\":\"hd-router-su@hastingsdirect.com\",\"password\":\"123\"}")
+                .content("{\"username\":\"hd-router-su@hddirect.com\",\"password\":\"123\"}")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)).andReturn();
 
