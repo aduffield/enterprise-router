@@ -13,7 +13,7 @@ spring:
     active: "dev"
   security:
     user:
-      name: hdadmin
+      name: hd-router-su@hddirect.com
       password: 123
       email: hd-router-su@hddirect.com
 
